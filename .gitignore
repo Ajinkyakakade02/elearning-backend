@@ -1,0 +1,66 @@
+# Compiled files
+target/
+*.class
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE
+.idea/
+*.iws
+*.iml
+*.ipr
+.classpath
+.project
+.settings
+.springBeans
+.sts4-cache
+.vscode/
+.apt_generated
+.factorypath
+
+# Logs
+logs/
+*.log
+heapdump*.hprof
+
+# Environment
+.env
+application-local.properties
+application-*.properties
+!application.properties
+!application-dev.properties
+!application-prod.properties
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Database migrations (if using Flyway/Liquibase)
+db/migration/*.sql
+
+# Temp files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Test files
+test-output/
+*.test
+*.spec
+
+# Build reports
+target/surefire-reports/
+target/failsafe-reports/
