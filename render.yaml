@@ -1,0 +1,35 @@
+# render.yaml
+services:
+  - type: web
+    name: elearning-backend
+    env: docker
+    repo: https://github.com/yourusername/elearning-backend
+    branch: main
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DB_URL
+        fromDatabase:
+          name: elearning-db
+          property: connectionString
+      - key: DB_USERNAME
+        fromDatabase:
+          name: elearning-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: elearning-db
+          property: password
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRATION
+        value: 86400000
+      - key: FRONTEND_URL
+        value: https://your-frontend.vercel.app
+      - key: SERVER_PORT
+        value: 8080
+
+databases:
+  - name: elearning-db
+    plan: free
+    databaseName: elearning_db
+    user: elearning_user
