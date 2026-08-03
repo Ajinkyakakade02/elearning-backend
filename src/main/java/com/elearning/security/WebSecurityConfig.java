@@ -56,8 +56,9 @@ public class WebSecurityConfig {
                         .requestMatchers("/api/lessons/**").permitAll()
                         .requestMatchers("/public/**").permitAll()
                         .requestMatchers("/error").permitAll()
+                        .requestMatchers("/health").permitAll()  // ← ADDED THIS LINE
                         .requestMatchers(org.springframework.http.HttpMethod.OPTIONS, "/**").permitAll()
-                        // All other endpoints require authentication (no role checks needed)
+                        // All other endpoints require authentication
                         .anyRequest().authenticated()
                 );
 
